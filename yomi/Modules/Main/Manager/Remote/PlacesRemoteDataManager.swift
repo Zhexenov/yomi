@@ -35,7 +35,10 @@ class PlacesRemoteDataManager : IPlacesRemoteDataManager {
         provider.request(.nearby) { [weak self] (result) in
             switch result {
             case let .success(response):
-                if let searchResponse: SearchResponse = try? JSONDecoder().decode(SearchResponse.self, from: response.data) {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                if let searchResponse: SearchResponse = try? decoder.decode(SearchResponse.self, from: response.data) {
                     self?.handler?.placesFetched(searchResponse.results)
                     return
                 }

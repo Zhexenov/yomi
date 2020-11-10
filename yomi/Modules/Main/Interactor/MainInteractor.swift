@@ -37,14 +37,26 @@ class MainInteractor: IMainInteractor {
     }
     
     func findNearbyPizzerias() {
-        remoteDataManager.fetchNearbyPlaces()
+        let list = localDataManager.fetchSavedPlaces()
+        
+        guard !list.isEmpty else {
+            remoteDataManager.fetchNearbyPlaces()
+            return
+        }
+        presenter?.onPlacesFound(list)
     }
 }
 
 
 extension MainInteractor : MainDataManagerOutput {
     func placesFetched(_ list: [Place]) {
-        presenter?.onPlacesFound(list)
+        var topMostPlaces = list
+        
+        if list.count > 5 {
+            topMostPlaces = Array(list.prefix(5))
+        }
+        presenter?.onPlacesFound(topMostPlaces)
+        localDataManager.savePlaces(topMostPlaces)
     }
     
     func onError(code: Int, message: String?) {

@@ -8,19 +8,9 @@
 import Foundation
 
 
-struct Geometry : Decodable {
-    let location: Location
-}
-
-struct Location : Decodable {
-    let lat: Double
-    let lng: Double
-}
-
-
 struct Place : Decodable {
+    let placeId: String
     let name: String
-    let geometry: Geometry
 }
 
 

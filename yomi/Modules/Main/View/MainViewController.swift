@@ -9,15 +9,11 @@
 import UIKit
 
 
-protocol IMainView : class {
+protocol IMainView : IBaseView {
     
     var presenter: IMainPresenter? { get set }
     
     func showPlaces(_ list: [Place])
-    
-    func showLoading()
-    func hideLoading()
-    func showError(_ message: String)
 }
 
 
@@ -44,7 +40,7 @@ class MainViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Nearby pizzerias"
         setupViews()
         presenter?.viewDidLoad()
         
@@ -95,7 +91,7 @@ extension MainViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        presenter.didSelect(at: indexPath.row)
+        presenter?.onDidSelectPlace(list[indexPath.row])
     }
 }
 

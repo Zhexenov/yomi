@@ -16,6 +16,8 @@ protocol IMainPresenter : class {
     func viewDidLoad()
     
     func update()
+    
+    func onDidSelectPlace(_ place: Place)
 }
 
 
@@ -32,23 +34,31 @@ class MainPresenter : IMainPresenter {
     }
     
     func viewDidLoad() {
-        view?.showLoading()
+        view?.showLoading?()
         interactor.findNearbyPizzerias()
     }
     
     func update() {
         interactor.findNearbyPizzerias()
     }
+    
+    func onDidSelectPlace(_ place: Place) {
+        wireframe.presentPlaceModule(place)
+    }
 }
 
 
 extension MainPresenter : IMainInteractorOutput {
     func onPlacesFound(_ list: [Place]) {
-        view?.hideLoading()
+        view?.hideLoading?()
         view?.showPlaces(list)
     }
     
     func onError(_ message: String?) {
-        view?.hideLoading()
+        view?.hideLoading?()
+        
+        if let msg = message {
+            view?.showError?(message: msg)
+        }
     }
 }

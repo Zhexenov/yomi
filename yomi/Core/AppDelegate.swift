@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AppRouter.assembler.apply(assemblies: [
             MainAssembly(),
+            PlaceAssembly(),
         ])
         
         AppRouter.products = [

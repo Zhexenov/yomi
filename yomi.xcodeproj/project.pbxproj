@@ -31,6 +31,13 @@
 		AFE26623255AE73B009A7154 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26622255AE73B009A7154 /* UIViewExtension.swift */; };
 		AFE26629255AEBBF009A7154 /* PizzeriaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26628255AEBBF009A7154 /* PizzeriaApi.swift */; };
 		AFE2662C255AEC00009A7154 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2662B255AEC00009A7154 /* Api.swift */; };
+		AFE64677255B10F200E436D1 /* PlaceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE64671255B10F200E436D1 /* PlaceModule.swift */; };
+		AFE64678255B10F200E436D1 /* PlacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE64672255B10F200E436D1 /* PlacePresenter.swift */; };
+		AFE64679255B10F200E436D1 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE64673255B10F200E436D1 /* PlaceViewController.swift */; };
+		AFE6467A255B10F200E436D1 /* PlaceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE64674255B10F200E436D1 /* PlaceProtocols.swift */; };
+		AFE6467C255B10F200E436D1 /* PlaceWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE64676255B10F200E436D1 /* PlaceWireframe.swift */; };
+		AFE6467F255B111300E436D1 /* PlaceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE6467E255B111300E436D1 /* PlaceAssembly.swift */; };
+		AFE64684255B11AA00E436D1 /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE64683255B11AA00E436D1 /* BaseProtocols.swift */; };
 		CFAC0AFD700ED9FEF3FE072E /* Pods_yomi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E8A0F8A99D47E9B2702BDC /* Pods_yomi.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +71,13 @@
 		AFE26622255AE73B009A7154 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		AFE26628255AEBBF009A7154 /* PizzeriaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzeriaApi.swift; sourceTree = "<group>"; };
 		AFE2662B255AEC00009A7154 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		AFE64671255B10F200E436D1 /* PlaceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModule.swift; sourceTree = "<group>"; };
+		AFE64672255B10F200E436D1 /* PlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresenter.swift; sourceTree = "<group>"; };
+		AFE64673255B10F200E436D1 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		AFE64674255B10F200E436D1 /* PlaceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceProtocols.swift; sourceTree = "<group>"; };
+		AFE64676255B10F200E436D1 /* PlaceWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceWireframe.swift; sourceTree = "<group>"; };
+		AFE6467E255B111300E436D1 /* PlaceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAssembly.swift; sourceTree = "<group>"; };
+		AFE64683255B11AA00E436D1 /* BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +109,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF929768255B12CF00D2A720 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AFE64670255B10D900E436D1 /* Place */,
+				AFE265B1255AB863009A7154 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		AFE26584255A71D2009A7154 = {
 			isa = PBXGroup;
 			children = (
@@ -116,20 +139,15 @@
 		AFE2658F255A71D2009A7154 /* yomi */ = {
 			isa = PBXGroup;
 			children = (
-				AFE26590255A71D2009A7154 /* AppDelegate.swift */,
-				AFE265F6255AC644009A7154 /* AppRouter.swift */,
-				AFE265F9255AC681009A7154 /* BaseAppRouter.swift */,
-				AFE265FC255AC716009A7154 /* Module.swift */,
-				AFE265B1255AB863009A7154 /* Main */,
+				AF929768255B12CF00D2A720 /* Modules */,
+				AF25E1FF255AEEEE0047028A /* NetworkModel.swift */,
+				AFE64688255B12A600E436D1 /* Util */,
+				AFE64687255B127100E436D1 /* Core */,
+				AFE64682255B119E00E436D1 /* Base */,
 				AFE2659C255A71D2009A7154 /* Assets.xcassets */,
 				AFE2659E255A71D2009A7154 /* LaunchScreen.storyboard */,
 				AFE265A1255A71D2009A7154 /* Info.plist */,
 				AFE26599255A71D2009A7154 /* yomi.xcdatamodeld */,
-				AFE26618255ADF82009A7154 /* ProductRouter.swift */,
-				AFE2661F255AE6C2009A7154 /* LoadingView.swift */,
-				AFE26622255AE73B009A7154 /* UIViewExtension.swift */,
-				AFE2662B255AEC00009A7154 /* Api.swift */,
-				AF25E1FF255AEEEE0047028A /* NetworkModel.swift */,
 			);
 			path = yomi;
 			sourceTree = "<group>";
@@ -223,6 +241,49 @@
 				AFE2661C255AE0A3009A7154 /* MainModule.swift */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		AFE64670255B10D900E436D1 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				AFE64671255B10F200E436D1 /* PlaceModule.swift */,
+				AFE64672255B10F200E436D1 /* PlacePresenter.swift */,
+				AFE64673255B10F200E436D1 /* PlaceViewController.swift */,
+				AFE64674255B10F200E436D1 /* PlaceProtocols.swift */,
+				AFE64676255B10F200E436D1 /* PlaceWireframe.swift */,
+				AFE6467E255B111300E436D1 /* PlaceAssembly.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		AFE64682255B119E00E436D1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AFE64683255B11AA00E436D1 /* BaseProtocols.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AFE64687255B127100E436D1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AFE26618255ADF82009A7154 /* ProductRouter.swift */,
+				AFE2661F255AE6C2009A7154 /* LoadingView.swift */,
+				AFE26590255A71D2009A7154 /* AppDelegate.swift */,
+				AFE265F6255AC644009A7154 /* AppRouter.swift */,
+				AFE265F9255AC681009A7154 /* BaseAppRouter.swift */,
+				AFE265FC255AC716009A7154 /* Module.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AFE64688255B12A600E436D1 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AFE26622255AE73B009A7154 /* UIViewExtension.swift */,
+				AFE2662B255AEC00009A7154 /* Api.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,10 +400,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE64679255B10F200E436D1 /* PlaceViewController.swift in Sources */,
 				AFE26595255A71D2009A7154 /* MainViewController.swift in Sources */,
 				AFE265E8255AC15A009A7154 /* PlacesLocalDataManager.swift in Sources */,
 				AF25E20A255AF6FC0047028A /* PlaceCell.swift in Sources */,
 				AFE265EE255AC355009A7154 /* MainAssembly.swift in Sources */,
+				AFE6467A255B10F200E436D1 /* PlaceProtocols.swift in Sources */,
 				AFE2662C255AEC00009A7154 /* Api.swift in Sources */,
 				AFE265FA255AC681009A7154 /* BaseAppRouter.swift in Sources */,
 				AFE265FD255AC716009A7154 /* Module.swift in Sources */,
@@ -351,6 +414,7 @@
 				AF25E200255AEEEE0047028A /* NetworkModel.swift in Sources */,
 				AFE265F1255AC3EA009A7154 /* MainWireframe.swift in Sources */,
 				AFE26623255AE73B009A7154 /* UIViewExtension.swift in Sources */,
+				AFE64678255B10F200E436D1 /* PlacePresenter.swift in Sources */,
 				AFE26591255A71D2009A7154 /* AppDelegate.swift in Sources */,
 				AFE2659B255A71D2009A7154 /* yomi.xcdatamodeld in Sources */,
 				AFE265E5255AC14D009A7154 /* PlacesRemoteDataManager.swift in Sources */,
@@ -358,8 +422,12 @@
 				AFE265EB255AC16F009A7154 /* MainInteractor.swift in Sources */,
 				AFE26629255AEBBF009A7154 /* PizzeriaApi.swift in Sources */,
 				AFE26619255ADF82009A7154 /* ProductRouter.swift in Sources */,
+				AFE6467F255B111300E436D1 /* PlaceAssembly.swift in Sources */,
+				AFE6467C255B10F200E436D1 /* PlaceWireframe.swift in Sources */,
 				AFE2661D255AE0A3009A7154 /* MainModule.swift in Sources */,
 				AFE265DF255AC0A9009A7154 /* MainPresenter.swift in Sources */,
+				AFE64684255B11AA00E436D1 /* BaseProtocols.swift in Sources */,
+				AFE64677255B10F200E436D1 /* PlaceModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
