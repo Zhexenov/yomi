@@ -7,13 +7,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol IMainView : class {
+    
+    func showLoading()
+    func hideLoading()
+}
+
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 
 }
 
+
+extension MainViewController : IMainView {
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
+    }
+}

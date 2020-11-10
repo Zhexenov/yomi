@@ -3,29 +3,67 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF25E200255AEEEE0047028A /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25E1FF255AEEEE0047028A /* NetworkModel.swift */; };
+		AF25E20A255AF6FC0047028A /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25E208255AF6FC0047028A /* PlaceCell.swift */; };
+		AF25E20B255AF6FC0047028A /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF25E209255AF6FC0047028A /* PlaceCell.xib */; };
 		AFE26591255A71D2009A7154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26590255A71D2009A7154 /* AppDelegate.swift */; };
-		AFE26593255A71D2009A7154 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26592255A71D2009A7154 /* SceneDelegate.swift */; };
-		AFE26595255A71D2009A7154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26594255A71D2009A7154 /* ViewController.swift */; };
-		AFE26598255A71D2009A7154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE26596255A71D2009A7154 /* Main.storyboard */; };
+		AFE26595255A71D2009A7154 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26594255A71D2009A7154 /* MainViewController.swift */; };
 		AFE2659B255A71D2009A7154 /* yomi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFE26599255A71D2009A7154 /* yomi.xcdatamodeld */; };
 		AFE2659D255A71D2009A7154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE2659C255A71D2009A7154 /* Assets.xcassets */; };
 		AFE265A0255A71D2009A7154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE2659E255A71D2009A7154 /* LaunchScreen.storyboard */; };
+		AFE265DF255AC0A9009A7154 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265DE255AC0A9009A7154 /* MainPresenter.swift */; };
+		AFE265E5255AC14D009A7154 /* PlacesRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265E4255AC14D009A7154 /* PlacesRemoteDataManager.swift */; };
+		AFE265E8255AC15A009A7154 /* PlacesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265E7255AC15A009A7154 /* PlacesLocalDataManager.swift */; };
+		AFE265EB255AC16F009A7154 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265EA255AC16F009A7154 /* MainInteractor.swift */; };
+		AFE265EE255AC355009A7154 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265ED255AC355009A7154 /* MainAssembly.swift */; };
+		AFE265F1255AC3EA009A7154 /* MainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265F0255AC3EA009A7154 /* MainWireframe.swift */; };
+		AFE265F7255AC644009A7154 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265F6255AC644009A7154 /* AppRouter.swift */; };
+		AFE265FA255AC681009A7154 /* BaseAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265F9255AC681009A7154 /* BaseAppRouter.swift */; };
+		AFE265FD255AC716009A7154 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE265FC255AC716009A7154 /* Module.swift */; };
+		AFE26604255AD03B009A7154 /* MainDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26603255AD03B009A7154 /* MainDataManager.swift */; };
+		AFE26619255ADF82009A7154 /* ProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26618255ADF82009A7154 /* ProductRouter.swift */; };
+		AFE2661D255AE0A3009A7154 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2661C255AE0A3009A7154 /* MainModule.swift */; };
+		AFE26620255AE6C2009A7154 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2661F255AE6C2009A7154 /* LoadingView.swift */; };
+		AFE26623255AE73B009A7154 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26622255AE73B009A7154 /* UIViewExtension.swift */; };
+		AFE26629255AEBBF009A7154 /* PizzeriaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE26628255AEBBF009A7154 /* PizzeriaApi.swift */; };
+		AFE2662C255AEC00009A7154 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2662B255AEC00009A7154 /* Api.swift */; };
+		CFAC0AFD700ED9FEF3FE072E /* Pods_yomi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E8A0F8A99D47E9B2702BDC /* Pods_yomi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13E8A0F8A99D47E9B2702BDC /* Pods_yomi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yomi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23C1558318D49EAC700F6C51 /* Pods-yomi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yomi.release.xcconfig"; path = "Target Support Files/Pods-yomi/Pods-yomi.release.xcconfig"; sourceTree = "<group>"; };
+		4C5CF9BDF51E2C43957C8AB2 /* Pods-yomi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yomi.debug.xcconfig"; path = "Target Support Files/Pods-yomi/Pods-yomi.debug.xcconfig"; sourceTree = "<group>"; };
+		AF25E1FF255AEEEE0047028A /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		AF25E208255AF6FC0047028A /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		AF25E209255AF6FC0047028A /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
 		AFE2658D255A71D2009A7154 /* yomi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE26590255A71D2009A7154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFE26592255A71D2009A7154 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AFE26594255A71D2009A7154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFE26597255A71D2009A7154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFE26594255A71D2009A7154 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AFE2659A255A71D2009A7154 /* yomi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = yomi.xcdatamodel; sourceTree = "<group>"; };
 		AFE2659C255A71D2009A7154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFE2659F255A71D2009A7154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFE265A1255A71D2009A7154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE265DE255AC0A9009A7154 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		AFE265E4255AC14D009A7154 /* PlacesRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRemoteDataManager.swift; sourceTree = "<group>"; };
+		AFE265E7255AC15A009A7154 /* PlacesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesLocalDataManager.swift; sourceTree = "<group>"; };
+		AFE265EA255AC16F009A7154 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		AFE265ED255AC355009A7154 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		AFE265F0255AC3EA009A7154 /* MainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWireframe.swift; sourceTree = "<group>"; };
+		AFE265F6255AC644009A7154 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		AFE265F9255AC681009A7154 /* BaseAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppRouter.swift; sourceTree = "<group>"; };
+		AFE265FC255AC716009A7154 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		AFE26603255AD03B009A7154 /* MainDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManager.swift; sourceTree = "<group>"; };
+		AFE26618255ADF82009A7154 /* ProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRouter.swift; sourceTree = "<group>"; };
+		AFE2661C255AE0A3009A7154 /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
+		AFE2661F255AE6C2009A7154 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AFE26622255AE73B009A7154 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		AFE26628255AEBBF009A7154 /* PizzeriaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzeriaApi.swift; sourceTree = "<group>"; };
+		AFE2662B255AEC00009A7154 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +71,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAC0AFD700ED9FEF3FE072E /* Pods_yomi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FBE1BD926CD439D2B848461 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C5CF9BDF51E2C43957C8AB2 /* Pods-yomi.debug.xcconfig */,
+				23C1558318D49EAC700F6C51 /* Pods-yomi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		63C5BB1FC3FC06945F8C8E93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13E8A0F8A99D47E9B2702BDC /* Pods_yomi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFE26584255A71D2009A7154 = {
 			isa = PBXGroup;
 			children = (
 				AFE2658F255A71D2009A7154 /* yomi */,
 				AFE2658E255A71D2009A7154 /* Products */,
+				1FBE1BD926CD439D2B848461 /* Pods */,
+				63C5BB1FC3FC06945F8C8E93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,15 +117,112 @@
 			isa = PBXGroup;
 			children = (
 				AFE26590255A71D2009A7154 /* AppDelegate.swift */,
-				AFE26592255A71D2009A7154 /* SceneDelegate.swift */,
-				AFE26594255A71D2009A7154 /* ViewController.swift */,
-				AFE26596255A71D2009A7154 /* Main.storyboard */,
+				AFE265F6255AC644009A7154 /* AppRouter.swift */,
+				AFE265F9255AC681009A7154 /* BaseAppRouter.swift */,
+				AFE265FC255AC716009A7154 /* Module.swift */,
+				AFE265B1255AB863009A7154 /* Main */,
 				AFE2659C255A71D2009A7154 /* Assets.xcassets */,
 				AFE2659E255A71D2009A7154 /* LaunchScreen.storyboard */,
 				AFE265A1255A71D2009A7154 /* Info.plist */,
 				AFE26599255A71D2009A7154 /* yomi.xcdatamodeld */,
+				AFE26618255ADF82009A7154 /* ProductRouter.swift */,
+				AFE2661F255AE6C2009A7154 /* LoadingView.swift */,
+				AFE26622255AE73B009A7154 /* UIViewExtension.swift */,
+				AFE2662B255AEC00009A7154 /* Api.swift */,
+				AF25E1FF255AEEEE0047028A /* NetworkModel.swift */,
 			);
 			path = yomi;
+			sourceTree = "<group>";
+		};
+		AFE265B1255AB863009A7154 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AFE2661B255AE094009A7154 /* Module */,
+				AFE265B2255AB86C009A7154 /* Assembly */,
+				AFE265B4255AB89E009A7154 /* Interactor */,
+				AFE265B3255AB891009A7154 /* Manager */,
+				AFE265B5255AB8A5009A7154 /* Presenter */,
+				AFE265B7255AB8BB009A7154 /* Router */,
+				AFE265B6255AB8AB009A7154 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AFE265B2255AB86C009A7154 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				AFE265ED255AC355009A7154 /* MainAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		AFE265B3255AB891009A7154 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AFE265E2255AC109009A7154 /* Remote */,
+				AFE265E1255AC104009A7154 /* Local */,
+				AFE26603255AD03B009A7154 /* MainDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		AFE265B4255AB89E009A7154 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AFE265EA255AC16F009A7154 /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AFE265B5255AB8A5009A7154 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AFE265DE255AC0A9009A7154 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AFE265B6255AB8AB009A7154 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFE26594255A71D2009A7154 /* MainViewController.swift */,
+				AF25E208255AF6FC0047028A /* PlaceCell.swift */,
+				AF25E209255AF6FC0047028A /* PlaceCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFE265B7255AB8BB009A7154 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AFE265F0255AC3EA009A7154 /* MainWireframe.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AFE265E1255AC104009A7154 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				AFE265E7255AC15A009A7154 /* PlacesLocalDataManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		AFE265E2255AC109009A7154 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				AFE265E4255AC14D009A7154 /* PlacesRemoteDataManager.swift */,
+				AFE26628255AEBBF009A7154 /* PizzeriaApi.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		AFE2661B255AE094009A7154 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				AFE2661C255AE0A3009A7154 /* MainModule.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFE265A4255A71D2009A7154 /* Build configuration list for PBXNativeTarget "yomi" */;
 			buildPhases = (
+				F91871937E4984A48BF4D595 /* [CP] Check Pods Manifest.lock */,
 				AFE26589255A71D2009A7154 /* Sources */,
 				AFE2658A255A71D2009A7154 /* Frameworks */,
 				AFE2658B255A71D2009A7154 /* Resources */,
+				0F14D68FC6286B523E31E463 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,37 +284,88 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF25E20B255AF6FC0047028A /* PlaceCell.xib in Resources */,
 				AFE265A0255A71D2009A7154 /* LaunchScreen.storyboard in Resources */,
 				AFE2659D255A71D2009A7154 /* Assets.xcassets in Resources */,
-				AFE26598255A71D2009A7154 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F14D68FC6286B523E31E463 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yomi/Pods-yomi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yomi/Pods-yomi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yomi/Pods-yomi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F91871937E4984A48BF4D595 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yomi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFE26589255A71D2009A7154 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE26595255A71D2009A7154 /* ViewController.swift in Sources */,
+				AFE26595255A71D2009A7154 /* MainViewController.swift in Sources */,
+				AFE265E8255AC15A009A7154 /* PlacesLocalDataManager.swift in Sources */,
+				AF25E20A255AF6FC0047028A /* PlaceCell.swift in Sources */,
+				AFE265EE255AC355009A7154 /* MainAssembly.swift in Sources */,
+				AFE2662C255AEC00009A7154 /* Api.swift in Sources */,
+				AFE265FA255AC681009A7154 /* BaseAppRouter.swift in Sources */,
+				AFE265FD255AC716009A7154 /* Module.swift in Sources */,
+				AFE26620255AE6C2009A7154 /* LoadingView.swift in Sources */,
+				AFE26604255AD03B009A7154 /* MainDataManager.swift in Sources */,
+				AF25E200255AEEEE0047028A /* NetworkModel.swift in Sources */,
+				AFE265F1255AC3EA009A7154 /* MainWireframe.swift in Sources */,
+				AFE26623255AE73B009A7154 /* UIViewExtension.swift in Sources */,
 				AFE26591255A71D2009A7154 /* AppDelegate.swift in Sources */,
-				AFE26593255A71D2009A7154 /* SceneDelegate.swift in Sources */,
 				AFE2659B255A71D2009A7154 /* yomi.xcdatamodeld in Sources */,
+				AFE265E5255AC14D009A7154 /* PlacesRemoteDataManager.swift in Sources */,
+				AFE265F7255AC644009A7154 /* AppRouter.swift in Sources */,
+				AFE265EB255AC16F009A7154 /* MainInteractor.swift in Sources */,
+				AFE26629255AEBBF009A7154 /* PizzeriaApi.swift in Sources */,
+				AFE26619255ADF82009A7154 /* ProductRouter.swift in Sources */,
+				AFE2661D255AE0A3009A7154 /* MainModule.swift in Sources */,
+				AFE265DF255AC0A9009A7154 /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AFE26596255A71D2009A7154 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFE26597255A71D2009A7154 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AFE2659E255A71D2009A7154 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -220,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,6 +495,7 @@
 		};
 		AFE265A5255A71D2009A7154 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5CF9BDF51E2C43957C8AB2 /* Pods-yomi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +515,7 @@
 		};
 		AFE265A6255A71D2009A7154 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23C1558318D49EAC700F6C51 /* Pods-yomi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
